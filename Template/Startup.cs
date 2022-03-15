@@ -9,8 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Net.Http;
 using Microsoft.AspNetCore.Components;
-using Template.Services.Configuration;
-using Template.IoC;
 
 namespace Template
 {
@@ -25,9 +23,7 @@ namespace Template
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.Configure<EmailServerOptions>(Configuration.GetSection("Smtp"));
-            services.AddTemplateServices();
+        {            
             services.AddControllersWithViews();
 
             // Allows the use of UseMvc routing below replaces app.UseEndpoints(endpoints => {} )
@@ -87,6 +83,7 @@ namespace Template
                 routes.MapRoute(name: "Error404", template: "error", defaults: new { controller = "Home", action = "Error404" });
                 routes.MapRoute(name: "Blog", template: "blog", defaults: new { controller = "Home", action = "Blog" });
                 routes.MapRoute(name: "Contact", template: "contact", defaults: new { controller = "Home", action = "Contact" });
+                routes.MapRoute(name: "AirConditioning", template: "air-conditioning-heating", defaults: new { controller = "Home", action = "AirConditioning" });
 
 
                 routes.MapRoute(

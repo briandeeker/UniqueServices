@@ -1,17 +1,203 @@
-﻿@model EmailMessageViewModel
-
+﻿
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "HVAC &amp; Plumbing Services in Bradenton, FL | Unique Services Florida - ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["MetaDescription"] = "Unique Services provides heating, air conditioning, plumbing &amp; electrical services to the Bradenton area. Contact us today to find a solution to your needs.";
 }
+    
+<div class="hero-image">
+    <div class="container">
+        <div class="hero-text">
+            <h1>WEST FLORIDA'S HOME SERVICE EXPERTS</h1>
+            <h3>SERVING MANATEE, SARASOTA, AND CHARLOTTE COUNTIES</h3>
+            <div class="row" id="schedule-service">
+            <div class="col-lg-3">
+                <h2>SCHEDULE SERVICE NOW</h2>
+            </div>
+            <div class="col-lg-6">
+                <form class="row needs-validation" novalidate>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col">
+                            <input type="tel" class="form-control" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                        </div>
+                        <div class="col">
+                            <select class="form-select" aria-label="Select a Service" id="inputService">
+                                <option selected>Select a Service</option>
+                                <option value="1">Air Conditioning</option>
+                                <option value="2">Heating</option>
+                                <option value="3">Plumbing</option>
+                                <option value="4">Electrical</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-warning float-end" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>        
+    </div>
+</div>
+<hr class="mt-5" />
+<div class="container">    
+    <h4 class="text-center">OUR SERVICES</h4>
+    <p class="text-center"><img src="~/images/services-icon.png" alt="Services icon" /></p>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="row mt-5">
+        <div class="col-lg-3">
+            <img src="~/images/services-ac.jpg" class="img-fluid" alt="2 A/C Condensors" />
+            <h5 class="mt-5">AC</h5>
+            <p class="small mt-3">Since 1951, West Floridians have relied on the heating and cooling experts at Bradenton's Unique Services to keep them comfortable.</p>
+            <p class="small"><a href="" class="services-details">DETAILS</a></p>
+        </div>
+        <div class="col-lg-3">
+            <img src="~/images/services-heat.jpg" class="img-fluid" alt="Heating unit with technician" />
+            <h5 class="mt-5">HEATING</h5>
+            <p class="small mt-3">Sometimes in Florida, we need a little heat. Bradenton's Unique Services will keep you comfortable and warm in the occasional winter chill.</p>
+            <p class="small"><a href="" class="services-details">DETAILS</a></p>
+        </div>
+        <div class="col-lg-3">
+            <img src="~/images/services-plumbing.jpg" class="img-fluid" alt="Plumber fixing a sink" />
+            <h5 class="mt-5">PLUMBING</h5>
+            <p class="small mt-3">When you need emergency plumbing services in the Bradenton, FL area, Unique Services is always but a quick phone call away.</p>
+            <p class="small"><a href="" class="services-details">DETAILS</a></p>
+        </div>
+        <div class="col-lg-3">
+            <img src="~/images/services-electrical.jpg" class="img-fluid" alt="Electrician wiring an electrical box" />
+            <h5 class="mt-5">ELECTRICAL</h5>
+            <p class="small mt-3">Unique Services is well-equipped to offer standard and emergency electrical services for Bradenton and surrounding cities across West Florida.</p>
+            <p class="small"><a href="" class="services-details">DETAILS</a></p>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-6">
-        <h2>Contact Me</h2>
-        @await Html.PartialAsync("~/Views/Shared/_EmailTemplatePartial.cshtml", Model)
+<div class="container-fluid gray-bg mt-5">
+    <div class="container">
+        <div class="row mt-5 pt-5 pb-5">
+            <div class="col-lg-6 pt-3 pb-3">
+                <img src="~/images/coupon-50.jpg" class="img-fluid" alt="$50 coupon" />
+            </div>
+            <div class="col-lg-6 pt-3 pb-3">
+                <img src="~/images/coupon-75.jpg" class="img-fluid" alt="$75 coupon" />
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="container mt-5">
+    <h4 class="text-center">WHY CHOOSE UNIQUE SERVICES FLORIDA?</h4>
+    <p class="text-center"><img src="~/images/services-icon.png" alt="Services icon" /></p>
+
+    <div class="row mt-5">
+        <div class="col-lg-6">
+            <h5>Bradenton & Fort Myers HVAC Specialists Since 1951</h5>
+            <p class="mt-3 mb-5">For more than 60 years, West Floridians have relied upon Unique Services for their HVAC service needs from Bradenton to Fort Myers and surrounding areas. From air conditioning and furnace installations, maintenance, and repairs to air duct cleaning, we work around-the-clock to provide you with superior customer service. Available 24/7 for emergency repairs, our home service experts also provide electrical and plumbing services, including water filtration, drain cleaning, and swimming pool repair and maintenance. We want to keep you comfortable year-round, inside and out!</p>
+            <h5 class="mt-5">Reliable Plumbing, Electrical, and HVAC Repairs</h5>
+            <p class="mt-3">Plumbing, electrical, and HVAC repairs often require immediate attention from qualified experts who are trained and equipped to deal with them. That’s why Unique Services is here for you day or night with our 24/7 HVAC emergency repair services in the Bradenton area. Whether you have burst water pipes, a clogged drain, or your furnace is on the fritz, our experienced home service technicians are always a phone call away. You can count on us for prompt, professional service for your peace of mind!</p>
+        </div>
+        <div class="col-lg-6">
+            <h6>Unique Service Plans</h6>
+            <p class="mt-3">Our service agreements are referred to as “Unique Savings Agreements” because they’re designed to help you save money on your utility bills by ensuring optimum performance from your HVAC system.</p>
+            <h6 class="mt-3">Unique Customer Service</h6>
+            <p class="mt-3">We’ve spent many decades improving our customer experience from the first call forward. Our award-winning customer service stems from a company culture that believes your call is important, and your time is valuable.</p>
+            <h6 class="mt-3">Unique Work Ethic</h6>
+            <p class="mt-3">Our top priority is keeping your home or commercial space comfortable year-round with HVAC systems that are operating smoothly. Whether you need us to take a look at your furnace, air conditioner, or plumbing, you can rest assured that Unique Services has the manpower, skills, and work ethic to get the job done right the first time.</p>
+            <h6 class="mt-3">Unique Financing</h6>
+            <p class="mt-3">We understand that HVAC repairs often come at inconvenient times. Unique Services’ financing gives you more flexible options to pay for our home services.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid gray-bg mt-5 pb-5">
+    <div class="container">
+        <h4 class="text-center pt-5 white">ACCREDITED & TRUSTWORTHY</h4>
+        <p class="text-center pb-5"><img src="~/images/services-icon.png" alt="Services icon" /></p>        
+        <div class="row light-gray-bg text-center" id="business-associations">
+            <div class="col-lg-3 white-bg pt-3 pb-3 text-center">
+                <img src="~/images/bbb-logo.jpg" alt="BBB logo" class="img-fluid" />
+                <h5>BBB ACCREDITED</h5>
+                <hr class="accredited" />
+                <p class="small">Fully accredited by the Better Business Bureau.</p>
+            </div>
+            <div class="col-lg-3 white-bg pt-3 pb-3 text-center">
+                <img src="~/images/bbc-council.jpg" alt="BBC Council logo" class="img-fluid" />
+                <h5>BBC MEMBER</h5>
+                <hr class="accredited" />
+                <p class="small">We are proud to maintain a membership with the Better Business Council.</p>
+            </div>
+            <div class="col-lg-3 white-bg pt-3 pb-3 text-center">
+                <img src="~/images/chamber-of-commerce.jpg" alt="Chamber of Commerce logo" class="img-fluid" />
+                <h5>CHAMBER MEMBER</h5>
+                <hr class="accredited" />
+                <p class="small">We are active in our communities’ chamber of commerce.</p>
+            </div>
+            <div class="col-lg-3 white-bg pt-3 pb-3 text-center">
+                <img src="~/images/sarasota-chamber.jpg" alt="Chamber of Commerce logo" class="img-fluid" />
+                <h5>RECOGNIZED</h5>
+                <hr class="accredited" />
+                <p class="small">Recognized by the Sarasota Chamber of Commerce for excellence.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 text-center">
+    <h4>TESTIMONIALS</h4>
+    <p><img src="~/images/services-icon.png" alt="Services icon" /></p>
+    <p>With us you will have the peace of mind knowing that your repair and maintenance are in good hands.</p>
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p>An extremely personable and professional gentleman came and solved our issue, costing a fraction of the fortune for which I was bracing myself. We were in a bind. They knew it, and could have really stuck it to me, and didn't... unlike the last guys. I will definitely use Unique again. You should, too!</p>
+                        <p class="small"><strong><a href="https://www.google.com/maps/contrib/108036823572586773720?hl=en-US&sa=X&ved=2ahUKEwiS3-GZxb72AhVIVs0KHVGzDGoQvvQBegQIARBB" class="services-details" target="_blank">Darren Ford</a></strong> &nbsp;<i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>Jason from Unique came and solved the problem that looked to me like unsolvable. He found that the a/c is in it's default settings. He made it go quiet without actually affecting the efficiency of cooling. He also made the "Nest" problems go away and educated us how it works and how we should use it in  proper way! It was so good to get someone knowledgeable about his work and bringing simple solutions just with his deep knowledge to solve our A/C issue . Thanks Jason!</p>
+                        <p class="small"><strong><a href="https://www.google.com/maps/contrib/114453149531248633965?hl=en-US&sa=X&ved=2ahUKEwiS3-GZxb72AhVIVs0KHVGzDGoQvvQBegQIARBQ" class="services-details" target="_blank">The Reader</a></strong> &nbsp;<i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>We had the need for repair service on our HVAC system recently and Junior Moreno was the technician who responded.  He was very professional and courteous and extremely helpful.  He is a true asset to the Unique Services Company.</p>
+                        <p class="small"><strong><a href="https://www.google.com/maps/contrib/109087065961876090378?hl=en-US&sa=X&ved=2ahUKEwiS3-GZxb72AhVIVs0KHVGzDGoQvvQBegUIARClAQ" class="services-details" target="_blank">Donna McKinney</a></strong> &nbsp;<i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>David who installed our water heater, was very helpful and pleasant. Price was lower than 3 other quotes we received in the area.</p>
+                        <p class="small"><strong><a href="https://www.google.com/maps/contrib/101961769390345935941?hl=en-US&sa=X&ved=2ahUKEwiS3-GZxb72AhVIVs0KHVGzDGoQvvQBegUIARC3AQ" class="services-details" target="_blank">Mitchell Howard</a></strong> &nbsp;<i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>Zachary did an excellent job, thank you for sending him to maintain my system!</p>
+                        <p class="small"><strong><a href="https://www.google.com/maps/contrib/106521587981323174171?hl=en-US&sa=X&ved=2ahUKEwiS3-GZxb72AhVIVs0KHVGzDGoQvvQBegUIARDVAQ" class="services-details" target="_blank">Ron Dewick</a></strong> &nbsp;<i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>Junior is a great tech. Very professional and knowledgeable. Explained the issues at hand and work needed to be done in an easy to understand manner.</p>
+                        <p class="small"><strong><a href="https://www.google.com/maps/contrib/116997040393325239212?hl=en-US&sa=X&ved=2ahUKEwj7vJOo0L72AhVwmmoFHU0MAUIQvvQBegQIARAD" class="services-details" target="_blank">Shawn Smith</a></strong> &nbsp;<i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i> <i class="fa-solid fa-star" style="color: #ffc30c;"></i></p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+            
 </div>

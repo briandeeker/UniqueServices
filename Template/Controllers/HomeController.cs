@@ -1,28 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Template.Models;
-using Template.Services.Interfaces;
-using Template.Services.Types;
 
 namespace Template.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IEmailService _emailService;
 
-        public HomeController(ILogger<HomeController> logger, IEmailService emailService)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _emailService = emailService;
         }
 
         // return the views
         public IActionResult Index()
         {
-            EmailMessageViewModel vm = new EmailMessageViewModel() { RedirectUrl = "Index" };
-
-            return View(vm);
+            return View();
         }
 
         public IActionResult AboutUs()
@@ -37,16 +31,12 @@ namespace Template.Controllers
 
         public IActionResult Blog()
         {
-            EmailMessageViewModel vm = new EmailMessageViewModel() { RedirectUrl = "Blog" };
-
-            return View(vm);
+            return View();
         }
 
         public IActionResult Contact()
         {
-            EmailMessageViewModel vm = new EmailMessageViewModel() { RedirectUrl = "Contact" };
-
-            return View(vm);
+            return View();
         }
 
         public IActionResult EmailSent()
@@ -54,34 +44,22 @@ namespace Template.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> SendEmail(EmailMessageViewModel vm)
+        public IActionResult AirConditioning()
         {
-            if (!ModelState.IsValid)
-            {
-                return View(vm.RedirectUrl, vm);
-            }
-
-            var messageToSend = new EmailMessage()
-            {
-                FirstName = vm.FirstName,
-                LastName = vm.LastName,
-                EmailAddress = vm.EmailAddress,
-                Phone = vm.Phone,
-                Message = vm.Message
-            };
-
-            try
-            {
-                await _emailService.SendEmailAsync(messageToSend);
-
-                return RedirectToAction("EmailSent");
-            }
-            catch(Exception ex)
-            {
-                return RedirectToAction("Error");
-            }
+            return View();
         }
+
+        public IActionResult Heating()
+        {
+            return View();
+        }
+
+        public IActionResult Plumbing()
+        {
+            return View();
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
